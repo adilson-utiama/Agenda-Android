@@ -63,7 +63,7 @@ public class ListaAlunosActivity extends AppCompatActivity {
         List<Aluno> alunos =  alunoDAO.buscaAlunos();
         alunoDAO.close();
 
-        AlunosAdapter adapter = new AlunosAdapter();
+        AlunosAdapter adapter = new AlunosAdapter(this, alunos);
         listaAlunos.setAdapter(adapter);
     }
 
